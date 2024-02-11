@@ -1,0 +1,38 @@
+.card {
+    position: relative;
+    overflow: hidden;
+}
+  
+.card:hover img {
+    transform: scale(1.1); /* Memperbesar gambar saat kursor berada di atasnya */
+    transition: transform 0.3s ease; /* Efek transisi */
+}
+  
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1); /* Warna bayangan */
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Efek transisi */
+}
+  
+.card:hover::before {
+    opacity: 1; /* Menampilkan bayangan saat kursor berada di atasnya */
+}
+  
+.card-body,
+.card-footer {
+    position: relative;
+    z-index: 1;
+}
+  
+.card:hover .harga,
+.card:hover .btnDetail {
+    transform: scale(1.2); /* Memperbesar teks, harga, dan tombol saat kursor berada di atasnya */
+    transition: transform 0.3s ease; /* Efek transisi */
+}
+  
